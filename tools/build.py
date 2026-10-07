@@ -77,7 +77,7 @@ def bundle_tools():
         if target.suffix == ".dylib":
             changes.extend(["-id", "@rpath/" + target.name])
         if changes:
-            run("install_name_tool", *changes, str(target), stderr=subprocess.DEVNULL)
+            run("install_name_tool", *changes, str(target))
         manifest.append(f"{target.relative_to(CONTENTS)} ← {source}")
         # Keep the exact package version, build recipe/receipt and licences with the local bundle.
         parts = source.parts
@@ -92,7 +92,7 @@ def bundle_tools():
                     for file in package.glob(pattern):
                         if file.is_file():
                             shutil.copy2(file, dest / file.name)
-        run("codesign", "--force", "--sign", "-", str(target), stderr=subprocess.DEVNULL)
+        run("codesign", "--force", "--sign", "-", str(target))
     (notices / "BUNDLED-COMPONENTS.txt").write_text("\n".join(manifest) + "\n")
     shutil.copy2(ROOT / "THIRD_PARTY.md", notices / "README.md")
     for target in seen:
@@ -121,7 +121,7 @@ def main():
     info = {"CFBundleName": "Liltfold", "CFBundleDisplayName": "Liltfold", "CFBundleIdentifier": "com.hybes.liltfold", "CFBundleExecutable": "Liltfold", "CFBundlePackageType": "APPL", "CFBundleShortVersionString": "0.1.0", "CFBundleVersion": "1", "LSMinimumSystemVersion": minimum_os, "LSArchitecturePriority": ["arm64"], "NSHighResolutionCapable": True, "NSPrincipalClass": "NSApplication", "CFBundleIconFile": "Liltfold", "NSHumanReadableCopyright": "Liltfold · local by design", "CFBundleDocumentTypes": [{"CFBundleTypeName": "Folder", "CFBundleTypeRole": "Viewer", "LSItemContentTypes": ["public.folder"]}]}
     with (CONTENTS / "Info.plist").open("wb") as file:
         plistlib.dump(info, file)
-    run("codesign", "--force", "--deep", "--sign", "-", str(APP), stderr=subprocess.DEVNULL)
+    run("codesign", "--force", "--deep", "--sign", "-", str(APP))
     run("codesign", "--verify", "--deep", "--strict", str(APP))
     print(f"{APP} (Apple Silicon, macOS {minimum_os}+)")
 
