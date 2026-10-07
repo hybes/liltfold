@@ -56,7 +56,7 @@ def bundle_tools():
         seen.add(target)
         shutil.copy2(source, target)
         target.chmod(0o755)
-        subprocess.run(["codesign", "--remove-signature", str(target)], capture_output=True)
+        # Keep __LINKEDIT intact while changing load commands. Re-sign the modified copy below.
         changes = []
         for dep in dependencies(source):
             if dep.startswith(("/System/", "/usr/lib/")):
