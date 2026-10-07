@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  core:
+    name: Rust (${{ matrix.toolchain }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        toolchain: [stable, '1.88.0']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install Rust
+        run: rustup toolchain install ${{ matrix.toolchain }} --profile minimal --component rustfmt --component clippy
+      - name: Format and lint
+        if: matrix.toolchain == 'stable'
+        run: |
+          cargo +stable fmt --all -- --check
+          cargo +stable clippy --locked --all-targets -- -D warnings
+      - name: Core tests
+        run: cargo +${{ matrix.toolchain }} test --locked
+      - name: Packaging tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+
+  macos:
+    name: Apple Silicon build and codecs
+    runs-on: macos-15
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install build tools
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          brew install ffmpeg webp
+      - name: Build and verify the app bundle
+        run: python3 tools/build.py
+      - name: Generate local synthetic media
+        run: python3 tools/make_fixtures.py
+      - name: Verify native conversions and original integrity
+        run: |
+          xcrun swiftc -O -swift-version 5 -parse-as-library \
+            -import-objc-header native/Liltfold.h \
+            tests/NativeSmoke.swift native/MediaBridge.swift target/release/libliltfold.a \
+            -framework AppKit -framework ImageIO -framework UniformTypeIdentifiers \
+            -o .build/native-smoke
+          .build/native-smoke dist/Liltfold.app '.build/fixtures/Field collection' .build/native-smoke-output

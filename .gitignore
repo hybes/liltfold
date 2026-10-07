@@ -1,0 +1,15 @@
+/target/
+/dist/
+/.build/
+/test-media/
+/screenshots/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.mobileprovision
+.DS_Store

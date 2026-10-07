@@ -1,0 +1,590 @@
+{
+  "cases": [
+    {
+      "input": "jpg",
+      "output": "webp",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "jpg",
+      "output": "jpeg",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400,
+          "duration": "0.040000"
+        }
+      ]
+    },
+    {
+      "input": "jpg",
+      "output": "png",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "png",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "png",
+      "output": "webp",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "png",
+      "output": "jpeg",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400,
+          "duration": "0.040000"
+        }
+      ]
+    },
+    {
+      "input": "png",
+      "output": "png",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "png",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "heic",
+      "output": "webp",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "heic",
+      "output": "jpeg",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400,
+          "duration": "0.040000"
+        }
+      ]
+    },
+    {
+      "input": "heic",
+      "output": "png",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "png",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "webp",
+      "output": "webp",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "webp",
+      "output": "jpeg",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400,
+          "duration": "0.040000"
+        }
+      ]
+    },
+    {
+      "input": "webp",
+      "output": "png",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "png",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "tiff",
+      "output": "webp",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "tiff",
+      "output": "jpeg",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400,
+          "duration": "0.040000"
+        }
+      ]
+    },
+    {
+      "input": "tiff",
+      "output": "png",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "png",
+          "codec_type": "video",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "input": "gif",
+      "output": "webp",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "webp",
+          "codec_type": "video",
+          "width": 480,
+          "height": 320
+        }
+      ]
+    },
+    {
+      "input": "gif",
+      "output": "jpeg",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "codec_type": "video",
+          "width": 480,
+          "height": 320,
+          "duration": "0.040000"
+        }
+      ]
+    },
+    {
+      "input": "gif",
+      "output": "png",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "png",
+          "codec_type": "video",
+          "width": 480,
+          "height": 320
+        }
+      ]
+    },
+    {
+      "input": "mp4",
+      "output": "mp4",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 640,
+          "height": 360,
+          "duration": "4.000000"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "4.000000",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "mp4",
+      "output": "webm",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "codec_type": "video",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "codec_name": "opus",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "mov",
+      "output": "mp4",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 640,
+          "height": 360,
+          "duration": "4.000000"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "4.000000",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "mov",
+      "output": "webm",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "codec_type": "video",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "codec_name": "opus",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "webm",
+      "output": "mp4",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 640,
+          "height": 360,
+          "duration": "4.000000"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "4.000000",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "webm",
+      "output": "webm",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "codec_type": "video",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "codec_name": "opus",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "mp3",
+      "output": "mp3",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "mp3",
+      "output": "m4a",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "mp3",
+      "output": "wav",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "mp3",
+      "output": "flac",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "flac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "m4a",
+      "output": "mp3",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "m4a",
+      "output": "m4a",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "m4a",
+      "output": "wav",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "m4a",
+      "output": "flac",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "flac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "wav",
+      "output": "mp3",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "wav",
+      "output": "m4a",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "wav",
+      "output": "wav",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "wav",
+      "output": "flac",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "flac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "flac",
+      "output": "mp3",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "flac",
+      "output": "m4a",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "flac",
+      "output": "wav",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "pcm_s16le",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    },
+    {
+      "input": "flac",
+      "output": "flac",
+      "decoded_entire_output": true,
+      "streams": [
+        {
+          "codec_name": "flac",
+          "codec_type": "audio",
+          "duration": "8.000000",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ]
+    }
+  ],
+  "unchanged_original_hashes": true,
+  "corrupt_input_rejected": true
+}

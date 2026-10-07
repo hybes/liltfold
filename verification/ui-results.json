@@ -1,0 +1,59 @@
+{
+  "build" : "Rust release + Swift -O, arm64",
+  "checks" : [
+    "Nested fixture discovery returns all 26 files",
+    "Overlapping roots are normalised",
+    "Captured browsing-light",
+    "Native accessible tile opens its preview",
+    "Captured preview-image",
+    "Native image magnification works",
+    "Preview close restores exact browsing position",
+    "Video filter retains hidden image\/audio selections",
+    "Video plays and seeks with audio in AVKit",
+    "Captured preview-video",
+    "Audio plays and seeks with a waveform",
+    "Captured preview-audio",
+    "Show duplicates only returns the two exact groups",
+    "Hide duplicates keeps one representative per group",
+    "Filename search spans nested folders",
+    "Captured export-controls",
+    "Mixed export converts image\/video and keeps audio unchanged",
+    "Captured export-complete",
+    "Captured browsing-dark",
+    "Captured browsing-compact-dark",
+    "Command-A selects all 5000 matches, including offscreen files",
+    "Large collection keeps the native grid virtualised",
+    "Captured large-collection"
+  ],
+  "measurements" : [
+    {
+      "dataset" : "mixed-cold-thumbnail-cache",
+      "files" : 26,
+      "first_generated_thumbnail_ms" : 228,
+      "first_rendered_thumbnail_ms" : 352.04516668454744,
+      "rss_bytes" : 150814720
+    },
+    {
+      "dataset" : "mixed-cached-thumbnails",
+      "files" : 26,
+      "first_generated_thumbnail_ms" : 127,
+      "first_rendered_thumbnail_ms" : 218.49283331539482,
+      "rss_bytes" : 220233728
+    },
+    {
+      "dataset" : "5000-images-cold-thumbnail-cache",
+      "files" : 5000,
+      "first_generated_thumbnail_ms" : 355,
+      "first_rendered_thumbnail_ms" : 461.30441667628475,
+      "rss_bytes" : 314064896
+    },
+    {
+      "dataset" : "5000-images-cached-thumbnails",
+      "files" : 5000,
+      "first_generated_thumbnail_ms" : 144,
+      "first_rendered_thumbnail_ms" : 282.15129167074338,
+      "rss_bytes" : 336314368
+    }
+  ],
+  "ui_driver" : "in-process native test runner; no global input automation"
+}
